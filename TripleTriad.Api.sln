@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleTriad.Api", "TripleTriad.Api.csproj", "{46AD52D4-737B-4A73-8B42-CB7CA8322B2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripleTriad.Api.Tests", "TripleTriad.Api.Tests\TripleTriad.Api.Tests.csproj", "{C4A5B169-E582-4F01-89EF-321DCC436EED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{46AD52D4-737B-4A73-8B42-CB7CA8322B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46AD52D4-737B-4A73-8B42-CB7CA8322B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46AD52D4-737B-4A73-8B42-CB7CA8322B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A5B169-E582-4F01-89EF-321DCC436EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A5B169-E582-4F01-89EF-321DCC436EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A5B169-E582-4F01-89EF-321DCC436EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A5B169-E582-4F01-89EF-321DCC436EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

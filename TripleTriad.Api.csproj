@@ -2,12 +2,42 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
+        <UserSecretsId>c1f187c4-02c2-4efb-992b-8db6b08cadf8</UserSecretsId>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Azure.Data.Tables" Version="12.7.0-beta.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="TripleTriad.Api.Tests\**" />
+    </ItemGroup>
+    
+    <ItemGroup>
+         <InternalsVisibleTo Include="MyTestProject" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <EmbeddedResource Remove="TripleTriad.Api.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="TripleTriad.Api.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="TripleTriad.Api.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="TripleTriad.Api.Tests\obj\Debug\net6.0\MvcTestingAppManifest.json" />
+      <_ContentIncludedByDefault Remove="TripleTriad.Api.Tests\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="TripleTriad.Api.Tests\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="TripleTriad.Api.Tests\obj\TripleTriad.Api.Tests.csproj.nuget.dgspec.json" />
     </ItemGroup>
 
 </Project>

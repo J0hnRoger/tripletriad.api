@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5dca9fde_002D101e_002D4188_002D8059_002Db7ca9ccf19cb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GameDataController_SaveDatas" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C4A5B169-E582-4F01-89EF-321DCC436EED::net6.0::TripleTriad.Api.Tests.GameDataControllerIntegrationTests.GameDataController_SaveDatas&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::C4A5B169-E582-4F01-89EF-321DCC436EED::net6.0::TripleTriad.Api.Tests.GameDataControllerIntegrationTests.GameDataController_LoadDatas&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::C4A5B169-E582-4F01-89EF-321DCC436EED::net6.0::TripleTriad.Api.Tests.CardControllerTests.GetAllCards&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

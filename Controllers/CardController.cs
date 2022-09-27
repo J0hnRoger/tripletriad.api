@@ -1,26 +1,38 @@
+using Azure.Data.Tables;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using TripleTriad.Api.Models;
 
 namespace TripleTriad.Api.Controllers;
 
 [ApiController]
-[Route("api/[Controller]")]
+[Route("api/cards")]
 public class CardController : ControllerBase
 {
-    public CardController()
+    private readonly TableClient _tableClient;
+
+    public CardController(IConfiguration config)
     {
+        string url = config["AzureTable:AccountUrl"];
+        _tableClient = new TableClient(new Uri(url),
+            config["AzureTable:TableName"],
+            new TableSharedKeyCredential(config["AzureTable:AccountName"],
+                config["AzureTable:AccountKey"]));
     }
 
     [HttpGet]
-    public List<CardDto> Get()
+    public ActionResult<List<CardDto>> Get()
     {
-        return new List<CardDto>();
+        var result = _tableClient.Query<CardEntity>(filter: $"PartitionKey eq 'tripletriad:cards'");
+        
+        return Ok(result);
     }
     
     [HttpPost]
     public IActionResult Post([FromBody]CreateCardRequest createCard)
     {
-        // Save card
+        var newEntity = new CardEntity("tripletriad:cards", Guid.NewGuid().ToString(), createCard.Name, createCard.Top, createCard.Right, createCard.Bottom, createCard.Left, createCard.ImageUrl);
+        _tableClient.UpsertEntity(newEntity);
         return Ok();
     }
     
