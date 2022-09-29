@@ -29,10 +29,12 @@ public class CardController : ControllerBase
     }
     
     [HttpPost]
-    public IActionResult Post([FromBody]CreateCardRequest createCard)
+    public IActionResult Post([FromBody]CreateCardRequest newCard)
     {
-        var newEntity = new CardEntity("tripletriad:cards", Guid.NewGuid().ToString(), createCard.Name, createCard.Top, createCard.Right, createCard.Bottom, createCard.Left, createCard.ImageUrl);
-        _tableClient.UpsertEntity(newEntity);
+        // Upload Image 
+        var newEntity = new CardEntity("tripletriad:cards", Guid.NewGuid().ToString(), newCard.Name,newCard.Top, 
+            newCard.Right,newCard.Bottom, newCard.Left, newCard.ImageUrl);
+         _tableClient.UpsertEntity(newEntity);
         return Ok();
     }
     

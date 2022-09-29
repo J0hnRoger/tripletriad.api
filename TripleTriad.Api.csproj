@@ -9,6 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="Azure.Data.Tables" Version="12.7.0-beta.1" />
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.14.0-beta.1" />
         <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>

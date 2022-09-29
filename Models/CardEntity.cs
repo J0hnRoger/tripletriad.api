@@ -10,7 +10,7 @@ public class CardEntity : ITableEntity
     
     public string Id => RowKey;
     
-    public string Name { get; }
+    public string Name { get; set; }
     public int Top { get; set; }
     public int Right { get; set; }
     public int Bottom { get; set; }
